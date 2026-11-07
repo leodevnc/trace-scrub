@@ -1,0 +1,3 @@
+{"run_id":"synthetic-account-42","sequence":1,"kind":"started","duration_ms":0,"prompt":"SYNTHETIC_PRIVATE_PROMPT: 내 회의 기록을 찾아줘.","calls":[],"debug":{"note":"SYNTHETIC_INTERNAL_NOTE"}}
+{"run_id":"synthetic-account-42","sequence":2,"kind":"completed","duration_ms":145,"prompt":"SYNTHETIC_PRIVATE_PROMPT: 내 회의 기록을 찾아줘.","calls":[{"name":"search_docs","arguments":{"query":"SYNTHETIC_PRIVATE_QUERY"},"result":"SYNTHETIC_PRIVATE_RESULT"}]}
+{"run_id":"synthetic-account-99","sequence":1,"kind":"failed","duration_ms":32,"prompt":"SYNTHETIC_OTHER_PROMPT","calls":[{"name":"read_calendar","arguments":{"calendar":"SYNTHETIC_PRIVATE_CALENDAR"},"result":{"message":"SYNTHETIC_INTERNAL_FAILURE"}}]}

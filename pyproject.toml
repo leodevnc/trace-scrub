@@ -1,0 +1,18 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "trace-scrub"
+version = "0.1.0"
+description = "Policy-constrained local exports of structured agent traces"
+readme = "README.md"
+requires-python = ">=3.11"
+license = {text = "MIT"}
+dependencies = []
+
+[project.scripts]
+trace-scrub = "trace_scrub.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["trace_scrub*"]

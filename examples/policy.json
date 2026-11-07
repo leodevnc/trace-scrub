@@ -1,0 +1,23 @@
+{
+  "action": "object",
+  "required": ["run_id", "sequence", "kind", "duration_ms", "prompt", "calls"],
+  "fields": {
+    "run_id": {"action": "alias", "namespace": "run"},
+    "sequence": {"action": "number", "min": 1, "max": 10000},
+    "kind": {"action": "enum", "values": ["started", "completed", "failed"]},
+    "duration_ms": {"action": "number", "min": 0, "max": 600000},
+    "prompt": {"action": "mask"},
+    "debug": {"action": "drop"},
+    "calls": {
+      "action": "array", "max_items": 20,
+      "items": {
+        "action": "object", "required": ["name", "arguments", "result"],
+        "fields": {
+          "name": {"action": "enum", "values": ["search_docs", "read_calendar"]},
+          "arguments": {"action": "drop"},
+          "result": {"action": "mask"}
+        }
+      }
+    }
+  }
+}
